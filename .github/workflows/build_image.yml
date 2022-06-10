@@ -75,7 +75,7 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           context: /home/runner/work/tdlib-telegram-bot-api-docker/tdlib-telegram-bot-api-docker/tdlib-telegram-bot-api
           file: /home/runner/work/tdlib-telegram-bot-api-docker/tdlib-telegram-bot-api-docker/tdlib-telegram-bot-api/Dockerfile
-          platforms: linux/arm64,linux/amd64
+          platforms: linux/amd64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.prep.outputs.tags }}
           build-args: ${{ steps.prep.outputs.args }}
